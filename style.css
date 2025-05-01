@@ -46,14 +46,6 @@ body {
   max-width: 1442px !important;
 }
 
-.row,
-.col-md-6,
-.col-sm-12,
-.col-6 {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 /* Styling header */
 header {
   background: url("images/Rectangle\ 23824.png") top left no-repeat;
@@ -104,13 +96,31 @@ nav button.btn:hover {
 /* Hero section starts */
 .hero-left h2 {
   max-width: 516px;
-  line-height: 163%;
   letter-spacing: -1%;
 }
 
+.hero-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.hero-card-img {
+  width: 55.71px;
+  height: 55.71px;
+}
+
+.hero-card-img-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 15.57px;
+  padding: 15px;
+}
+
 .hero-img {
-  max-width: 583px;
-  max-height: 628px;
   z-index: 1;
   position: relative;
 }
@@ -118,18 +128,22 @@ nav button.btn:hover {
 .hero-right-text {
   width: fit-content;
   max-width: 464px;
-  max-height: 359px;
+  min-height: 359px;
   padding: 63px 30px;
   background-color: #fff;
   position: relative;
   z-index: 2;
   margin-top: -35%;
-  margin-left: -4%;
+}
+
+.hero-card-section {
+  margin-bottom: 40px;
 }
 
 .hi-robo {
   position: relative;
   margin-top: 60px;
+  margin-bottom: 90px;
   gap: 60px;
   z-index: 3;
 }
@@ -152,8 +166,45 @@ nav button.btn:hover {
 
 /* Tablet */
 @media (min-width: 768px) {
+  .row,
+  .col-md-6,
+  .col-sm-12,
+  .col-6 {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero-img {
+    max-width: 583px;
+    max-height: 628px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .hero-right-text {
+    width: fit-content;
+    max-width: 464px;
+    max-height: 359px;
+    padding: 63px 30px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    margin-top: -35%;
+    margin-left: -4%;
+  }
+
+  .hero-card-section {
+    margin-bottom: 0;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .row,
+  .col-md-6,
+  .col-sm-12,
+  .col-6 {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
